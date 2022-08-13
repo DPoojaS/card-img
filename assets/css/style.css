@@ -1,0 +1,69 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.posts{
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+}
+
+.posts figcaption{
+    position: absolute;
+    top: 0;
+    left:0;
+    /* transform: translate(-50%, -50%); */
+    height: 100%;
+    color:#fff;
+    width: 100%;
+    /* align-items: center; */
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 700;
+     font-size: 18px; 
+    background-color: rgba(0,0,0,.6);
+    /* opacity:0;  */
+     transition: all .3s;
+    transform: scale(0);
+}
+.posts:hover figcaption{
+    /* opacity: 1;  */
+     transform: scale(1); 
+
+}
+.posts figcaption p{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.posts > img{
+    width:100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+.id, .albumid  {
+    position: absolute;
+    top: 5px;
+    color: #fff;
+    transition: all .6s;
+    opacity: 0;
+}
+
+.id {
+    left: 10px;
+}
+.albumid {
+    right: 10px;
+}
+.posts:hover .id, .posts:hover .albumid{
+    opacity: 1;
+}
